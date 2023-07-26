@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./login.css">
+	<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+
+    
+</head>
+<body>
+	<div class="container">
+		<header class="d-flex justify-content-center py-3">
+		  <ul class="nav nav-pills">
+			<li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+			<li class="nav-item"><a href="./aboutus/aboutus.html" class="nav-link">About Us</a></li>
+			<li class="nav-item"><a  href="#" class="nav-link">Our Library</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
+		  </ul>
+		</header>
+	  </div>
+	
+
+		<div class="section">
+			<div class="container">
+				<div class="row full-height justify-content-center">
+					<div class="col-12 text-center align-self-center ">
+						<div class="section sm-2 text-center " height="100%" width="100%">
+							<h6 class="mb-0 pt-2 mt-10 pb-2"><span>Log In </span><span>Sign Up</span></h6>
+							<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+							<label for="reg-log"></label>
+							<div class="card-3d-wrap mx-auto">
+								<div class="card-3d-wrapper">
+									<div class="card-front">
+										<div class="center-wrap">
+											<div class="section text-center">
+												<h4 class="mb-4 pb-2">Log In</h4>
+												<div class="form-group">
+													<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+													<i class="input-icon uil uil-at"></i>
+												</div>	
+												<div class="form-group mt-2">
+													<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+													<i class="input-icon uil uil-lock-alt"></i>
+													
+												</div>
+												<a href="#" class="btn mt-4">submit</a>
+												<div id="my-signin2 "></div>
+												<script>
+												  function onSuccess(googleUser) {
+													console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+												  }
+												  function onFailure(error) {
+													console.log(error);
+												  }
+												  function renderButton() {
+													gapi.signin2.render('my-signin2', {
+													  'scope': 'profile email',
+													  'width': 200,
+													  'height': 50,
+													  'longtitle': true,
+													  'theme': 'dark',
+													  'onsuccess': onSuccess,
+													  'onfailure': onFailure
+													});
+												  }
+												</script>
+
+												<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+												<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+
+											</div>
+										</div>
+									</div>
+									<div class="card-back">
+										<div class="center-wrap">
+											<div class="section text-center">
+												<h4 class="mb-4 pb-3">Sign Up</h4>
+												<div class="form-group">
+													<input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+													<i class="input-icon uil uil-user"></i>
+												</div>	
+												<div class="form-group mt-2">
+													<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+													<i class="input-icon uil uil-at"></i>
+												</div>	
+												<div class="form-group mt-2">
+													<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+													<i class="input-icon uil uil-lock-alt"></i>
+												</div>
+												<a href="#" class="btn mt-4">submit</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>	
+							<div class=" thesvg col-12 mt-0 mt-90 pb-0">
+								<lottie-player src="https://lottie.host/96dbe57e-ade2-4f59-b506-861c7e1ed9c0/XbpZK9CIgY.json" background="transparent" speed="1" style="width: 100%; height: 300px;" loop autoplay></lottie-player>
+							</div>	
+						</div>			
+					</div>
+				</div>
+			</div>
+		</div>
+    </main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
